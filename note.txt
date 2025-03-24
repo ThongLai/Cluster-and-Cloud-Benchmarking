@@ -1,0 +1,29 @@
+- github upload
+- add download file from github
+
+
+mpicc pingpong.c -o pingpong
+chmod +x pingpong
+scp pingpong compute-node1:~
+scp pingpong compute-node2:~
+mpirun -np 4 --hostfile mpi_hosts ./pingpong
+
+mpicc mat_mat.c -o mat_mat
+chmod +x mat_mat
+scp mat_mat compute-node1:~
+scp mat_mat compute-node2:~
+mpirun -np 4 --hostfile mpi_hosts ./mat_mat
+
+
+scp -J headnode@172.166.178.255 compute-node1@10.0.0.6:pingpong_results.csv .
+
+
+
+
+CPU performance
+
+Memory usage
+
+Network communication speed
+
+All of the above
