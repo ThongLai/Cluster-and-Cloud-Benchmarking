@@ -9,7 +9,7 @@
 #define NUM_WARMUP 10           // Number of NUM_WARMUP iterations
 
 /* File output */
-#define RESULTS_FILENAME "ping_pong_results.csv"
+#define RESULTS_FILENAME "pingpong_results.csv"
 
 int main(int argc, char** argv) {
     int rank, size;
