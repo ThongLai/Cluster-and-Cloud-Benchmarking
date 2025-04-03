@@ -4,7 +4,7 @@
 
 For detailed implementation instructions and complete analysis, refer to the [**full laboratory report**](Laboratory%20report.pdf).
 
-## 📋 Overview
+## Overview
 
 This project demonstrates the **deployment and benchmarking** of a virtual computer cluster on Microsoft Azure. The system consists of **three Ubuntu 22.04 nodes** (*one headnode* and *two compute nodes*) connected through a shared virtual network (**HPC-vnet**), using **OpenMPI** for parallel processing.
 
@@ -16,9 +16,9 @@ The architecture shown above illustrates how the three nodes communicate through
 
 ---
 
-## 🧪 Benchmark Applications
+## Benchmark Applications
 
-### 📊 Pingpong Test (Communication Benchmark)
+### Pingpong Test (Communication Benchmark)
 
 The pingpong benchmark measures **communication performance** by sending messages of varying sizes between processes and recording both:
 - **Latency** (round-trip time)
@@ -38,7 +38,7 @@ The results show significant differences in communication performance based on m
 
 > **Key Insight:** The bandwidth comparison reveals that **our VM consistently outperforms the comparison VM** across all message sizes, with the gap widening as message size increases. For large messages (approaching 1MB), we see bandwidth exceeding **100 MiB/s**.
 
-### 📈 Matrix Multiplication (Computation Benchmark)
+### Matrix Multiplication (Computation Benchmark)
 
 The matrix multiplication benchmark tests **computational performance** by performing matrix-matrix multiplication with different matrix sizes:
 - **32×32** (small)
@@ -59,7 +59,7 @@ The results show that execution time scales significantly with size and configur
 
 ---
 
-## ⚙️ Performance Analysis
+## Performance Analysis
 
 We tested **three different cluster configurations** to evaluate both communication and computational performance:
 
@@ -69,7 +69,7 @@ We tested **three different cluster configurations** to evaluate both communicat
 | **p2_s2** | 2 processes with 2 slots per node | High-bandwidth communication with large messages |
 | **p4_s2** | 4 processes with 2 slots per node | Testing scaling behavior |
 
-### 🔄 Communication Performance
+### Communication Performance
 
 <p align="center">
   <img src="benchmark_plots/configuration_latency_comparison.png" width="700" alt="Pingpong Latency Comparison"/>
@@ -83,7 +83,7 @@ The latency comparison above shows that the **p2_s1 configuration provides the b
 
 For bandwidth performance, the **p2_s2 configuration achieves the highest bandwidth (~500 MiB/s)** for large messages, while small messages show minimal differences between configurations. We observe a **performance threshold at message sizes around 65KB** where bandwidth characteristics change significantly.
 
-### 💻 Computational Performance
+### Computational Performance
 
 <p align="center">
   <img src="benchmark_plots/large_matrix_config_comparison.png" width="700" alt="Large Matrix Configuration Comparison"/>
@@ -93,12 +93,12 @@ The large matrix (1024×1024) multiplication results above reveal that the **p2_
 
 ---
 
-## 🎯 Key Findings and Conclusion
+## Key Findings and Conclusion
 
 Our benchmarking results demonstrate that optimal configuration depends on workload characteristics:
 
-- **Communication-intensive applications** with large messages benefit from **p2_s2** ✅
-- **Computation-intensive applications** generally perform best with **p2_s1** ✅
-- Adding more processes doesn't always improve performance due to **increased communication overhead** ⚠️
+- **Communication-intensive applications** with large messages benefit from **p2_s2**
+- **Computation-intensive applications** generally perform best with **p2_s1**
+- Adding more processes doesn't always improve performance due to **increased communication overhead**
 
 > **These insights can guide optimal cluster configuration based on specific application requirements.**
