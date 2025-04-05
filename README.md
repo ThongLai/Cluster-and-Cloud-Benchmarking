@@ -2,7 +2,7 @@
 
 > **This repository contains MPI benchmark implementations and analysis for evaluating the performance of cloud-based clusters across different configurations.**
 
-For detailed implementation instructions and complete analysis, refer to the [**full laboratory report**](Laboratory%20report.pdf).
+For detailed implementation instructions and complete analysis, refer to the [**full laboratory report**](https://docs.google.com/viewer?url=github.com/ThongLai/Cluster-and-Cloud-Benchmarking/blob/main/Laboratory%20report.pdf?raw=true).
 
 ## Overview
 
