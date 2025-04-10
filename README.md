@@ -4,6 +4,10 @@
 
 For detailed implementation instructions and complete analysis, refer to the [**full laboratory report**](https://docs.google.com/viewer?url=github.com/ThongLai/Cluster-and-Cloud-Benchmarking/blob/main/Laboratory%20report.pdf?raw=true).
 
+- **Run live notebook ([data_visualisation.ipynb](https://github.com/ThongLai/Cluster-and-Cloud-Benchmarking/blob/main/data_visualisation.ipynb)):** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ThongLai/Cluster-and-Cloud-Benchmarking/main?urlpath=%2Fdoc%2Ftree%2Fdata_visualisation.ipynb)
+
+- **Data results: [data_results](https://github.com/ThongLai/Cluster-and-Cloud-Benchmarking/tree/main/data_results)**<a name="data" id="data"></a>
+
 ## Overview
 
 This project demonstrates the **deployment and benchmarking** of a virtual computer cluster on Microsoft Azure. The system consists of **three Ubuntu 22.04 nodes** (*one headnode* and *two compute nodes*) connected through a shared virtual network (**HPC-vnet**), using **OpenMPI** for parallel processing.
